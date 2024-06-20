@@ -3,24 +3,39 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/my_nav"
-    app:startDestination="@id/addFragment">
+    app:startDestination="@id/listFragment">
 
     <fragment
+        android:id="@+id/listFragment"
+        android:name="com.example.myroomapp.fragments.list.ListFragment"
+        android:label="List"
+        tools:layout="@layout/fragment_list" >
+        <action
+            android:id="@+id/action_listFragment_to_addFragment"
+            app:destination="@id/addFragment" />
+        <action
+            android:id="@+id/action_listFragment_to_updateFragment"
+            app:destination="@id/updateFragment" />
+    </fragment>
+    <fragment
         android:id="@+id/addFragment"
-        android:name="com.example.room_database.fragment.add.AddFragment"
-        android:label="fragment_add"
-        tools:layout="@layout/fragment_add">
+        android:name="com.example.myroomapp.fragments.add.AddFragment"
+        android:label="Add"
+        tools:layout="@layout/fragment_add" >
         <action
             android:id="@+id/action_addFragment_to_listFragment"
             app:destination="@id/listFragment" />
     </fragment>
     <fragment
-        android:id="@+id/listFragment"
-        android:name="com.example.room_database.fragment.list.ListFragment"
-        android:label="fragment_list"
-        tools:layout="@layout/fragment_list">
+        android:id="@+id/updateFragment"
+        android:name="com.example.myroomapp.fragments.update.UpdateFragment"
+        android:label="Update"
+        tools:layout="@layout/fragment_update" >
         <action
-            android:id="@+id/action_listFragment_to_addFragment"
-            app:destination="@id/addFragment" />
+            android:id="@+id/action_updateFragment_to_listFragment"
+            app:destination="@id/listFragment" />
+        <argument
+            android:name="currentUser"
+            app:argType="com.example.myroomapp.fragments.model.User" />
     </fragment>
 </navigation>

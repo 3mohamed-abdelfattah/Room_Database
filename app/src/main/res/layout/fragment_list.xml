@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragment.">
+    tools:context=".fragments.list.ListFragment">
 
 
     <androidx.recyclerview.widget.RecyclerView
@@ -24,12 +24,9 @@
         android:layout_marginEnd="40dp"
         android:layout_marginBottom="64dp"
         android:clickable="true"
-        android:contentDescription="@string/add_button_description"
         android:focusable="true"
-        android:src="@drawable/baseline_add_24"
+        android:src="@drawable/ic_baseline_add_24"
         android:tint="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>
