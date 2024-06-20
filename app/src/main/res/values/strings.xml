@@ -5,4 +5,5 @@
     <string name="add">Add</string>
     <string name="email">Email</string>
     <string name="name">Name</string>
+    <string name="add_button_description">Add</string>
 </resources>
